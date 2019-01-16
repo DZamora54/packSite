@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Your Pack Website</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="page">
+      <header class="header">
+        <img
+          class="logo"
+          id="header-img"
+          src="images/210px-Cub_Scouting_(Boy_Scouts_of_America).svg.png"
+          alt="cub-scout-logo"
+        />
+        <div id="unit-location">
+          <h1 class="item-a3" id="title">Pack X</h1>
+          <h2 class="item-a4" id="location">Your Town, State</h2>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#calendar">Calendar</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </header>
+      <main class="item-b">
+        <div class="item-b1">
+          <img
+            id="hero-img"
+            src="images/1280px-US_Navy_081004-N-5345W-021_Cub_Scouts_prepare_to_parade_the_colors.jpg"
+            alt="hero-img"
+          />
+        </div>
+        <div class="item-b2" id="about-us">
+          <h2 id="aboutHeader">About Us</h2>
+          <div id="heritage">
+            <img
+              class="about-us-img"
+              src="images/Old_Cub_Scouts.jpg"
+              alt="heritage-img"
+            />
+            <h3>Heritage</h3>
+            <p class="about-us-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div id="experience">
+            <img
+              class="about-us-img"
+              src="images/330px-Robert_Baden-Powell_in_South_Africa,_1896_(2).jpg"
+              alt="experience-img"
+            />
+            <h3>Experience</h3>
+            <p class="about-us-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div id="commitment">
+            <img
+              class="about-us-img"
+              src="images/gal1-150x150.jpg"
+              alt="commitment-img"
+            />
+            <h3>Commitment</h3>
+            <p class="about-us-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/-wUZ_yeY9qc"
+        ></iframe>
+        <form
+          class="item-b3"
+          id="form"
+          action="https://www.freecodecamp.com/email-submit"
+        >
+          <div id="contact">
+            <h2 id="contactHead">Contact Us</h2>
+            <label for="name" id="name-label">Name</label>
+            <input type="text" name="name" id="name" required />
+            <label for="email" id="email-label">Email</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message" id="message-label">Message</label>
+            <textarea rows="5" name="message" id="message" required></textarea>
+            <div class="submit-button" id="submit-button">
+              <input id="submit" type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </main>
+      <footer class="item-c">
+        All rights reserved. <br />
+        <small>&#x24B8; Your Pack</small>
+      </footer>
+    </div>
+  </body>
+</html>

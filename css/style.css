@@ -1,0 +1,357 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-align: center;
+  font-family: arial;
+}
+
+#page {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+main {
+  background: whitesmoke;
+  color: #444;
+  padding: 1rem;
+  margin-top: 109px;
+}
+
+footer {
+  background: #003f87;
+  color: #fcd116;
+  padding: 1rem;
+}
+
+#nav-bar {
+  color: #003f87;
+  background: #fcd116;
+  display: grid;
+  grid-area: nav-bar;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  grid-template-areas: "logo links";
+}
+
+#about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". aboutHeader ."
+    "heritage experience commitment";
+}
+#aboutHeader {
+  grid-area: aboutHeader;
+}
+#heritage {
+  grid-area: heritage;
+}
+#experience {
+  grid-area: experience;
+}
+#commitment {
+  grid-area: commitment;
+}
+
+.item-a {
+}
+.item-a1 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  grid-area: logo;
+  background-image: linear-gradient(to right, #fcd116 50%, #003f87);
+}
+.item-a2 {
+  grid-area: links;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #003f87;
+  color: #fcd116;
+}
+.item-a3 {
+  grid-area: header1;
+}
+.item-a4 {
+  grid-area: header2;
+}
+
+#title {
+  margin: 1px, auto, 1px, auto;
+}
+
+#header-img {
+  height: 5rem;
+  margin: 5px 5px 5px 5px;
+}
+
+#motto {
+  text-align: center;
+  margin: 5px auto 10px auto;
+}
+
+#title {
+  margin: 20px auto 5px auto;
+}
+#location {
+  margin: 5px auto 20px auto;
+}
+
+#hero-img {
+  width: 60%;
+  border: 2px solid #003f87;
+}
+#video {
+  width: 60%;
+}
+.about-us-img {
+  width: 200px;
+  height: 200px;
+  border-color: #003f87;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}
+.about-us-p {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+#unit-location {
+  display: block;
+  float: left;
+}
+#contact {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+    "contactHead contactHead"
+    "name-label name"
+    "email-label email"
+    "message-label message"
+    "submit submit";
+  grid-gap: 5px;
+  margin: 30px auto 30px auto;
+  border: 2px solid #003f87;
+  background: #fcd116;
+  padding-bottom: 30px;
+}
+#email,
+#name,
+#message {
+  width: 90%;
+}
+
+#contactHead {
+  grid-area: contactHead;
+}
+#name-label {
+  grid-area: name-label;
+}
+#name {
+  grid-area: name;
+}
+#email-label {
+  grid-area: email-label;
+}
+#email {
+  grid-area: email;
+}
+#message-label {
+  grid-area: message-label;
+}
+#message {
+  grid-area: message;
+}
+#submit-button {
+  grid-area: submit;
+}
+
+label {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* header */
+
+.header {
+  background-color: #fcd116;
+  color: #003f87;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fcd116;
+  color: #003f87;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #003f87;
+  text-decoration: none;
+  color: #003f87;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #003f87;
+  color: #fcd116;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+input[type="text"],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #dddddd;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #003f87;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #003f87;
+}
+/* 48em = 768px */
+
+@media (min-width: 912px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  #about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutHeader"
+      "heritage" "experience" "commitment";
+  }
+  #contact {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+      "contactHead contactHead"
+      "name-label name"
+      "email-label email"
+      "message-label message"
+      "submit submit";
+    grid-gap: 5px;
+    margin: 30px auto 30px auto;
+    border: 2px solid #003f87;
+    background: #fcd116;
+    padding-bottom: 30px;
+  }
+}
